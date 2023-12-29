@@ -1,0 +1,31 @@
+.container {
+    width: 100vw;
+    height: 100vw;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.container .imagem {
+    top: 0 !important;
+    left: 0 !important; 
+    right: 0 !important;
+    width: 428px;
+    height: 198px;
+}
+
+.container .logo {
+    width: Hug (178px);
+    height: Hug (48px);
+    top: 230px;
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 24px;
+}
+
+.container .login{
+    color: #3E334E;
+}
