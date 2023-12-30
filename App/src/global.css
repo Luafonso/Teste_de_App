@@ -1,31 +1,512 @@
-.container {
-    width: 100vw;
-    height: 100vw;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-.container .imagem {
-    top: 0 !important;
-    left: 0 !important; 
-    right: 0 !important;
-    width: 428px;
-    height: 198px;
-}
-
-.container .logo {
-    width: Hug (178px);
-    height: Hug (48px);
-    top: 230px;
-    gap: 16px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    margin-left: 24px;
-}
-
-.container .login{
+html,
+body {
+    font-family: 'Inter', sans-serif;
     color: #3E334E;
+    size: 20px;
+}
+
+/* celular normal */
+
+@media(max-width: 450px){
+    .container {
+        width: 100vw;
+        height: 100vw;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    .container .imagem {
+        width: 428px;
+        height: 198px;
+        margin-bottom: 32px;
+    }
+    
+    .container .logo {
+        width: Hug (178px);
+        height: Hug (48px);
+        top: 230px;
+        gap: 16px;
+        left: 24px;
+        margin-left: 24px;
+        margin-bottom: 32px;
+    
+    }
+    
+    .container .header {
+        width: 347px;
+        height: 60px;
+        top: 310px;
+        left: 24px;
+        margin-left: 24px;
+        margin-right: 57px;
+        margin-bottom: 32px;
+    }
+    
+    .container .Login {
+        width: 380px;
+        height: 24px;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    
+    .container form .inputContainer label {
+        width: 380px;
+        height: 16px;
+        line-height: 16px;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 24px;
+        line-height: 100%;
+    }
+    
+    .container form .inputContainer input {
+        width: 380px;
+        height: 56px;
+        gap: 8px;
+        padding: 16px;
+        align-items: center;
+        display: flex;
+        align-self: stretch;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        margin-top: 5px;
+        border: 1px solid #afa2c3;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.00);
+    }
+    
+    .container form .inputContainerPassword label {
+        width: 380px;
+        height: 16px;
+        line-height: 16px;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 24px;
+        line-height: 100%;
+    }
+    
+    .container form .inputContainerPassword input {
+        width: 380px;
+        height: 56px;
+        gap: 8px;
+        padding: 16px;
+        align-items: center;
+        display: flex;
+        align-self: stretch;
+        margin-left: 24px;
+        margin-top: 5px;
+        border: 1px solid #afa2c3;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.00);
+    }
+    
+    .container form .inputContainerPassword img {
+        width: 24px;
+        height: 100px;
+        padding: 4px, 2px, 3px, 2px;
+        cursor: pointer;
+        position: absolute;
+        margin-left: 270px;
+    }
+    
+    
+    .container form a {
+        width: 136px;
+        height: 16px;
+        font-weight: 400;
+        size: 16px;
+        line-height: 16px;
+        margin-left: 110px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+    
+    .container form .checkbox {
+        width: Hug (134px);
+        height: Hug (16px);
+        gap: 8px;    
+        margin-right: 5px;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+    
+    .container form .buttonLogin {
+        width: 178px;
+        height: 48px;
+        padding: 16px;
+        border-radius: 8px;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        background: #3E334E;
+    
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        border: none;
+        text-align: center;
+        color: #FFFFFF;
+    
+    }
+    
+    .container form .buttonSignUp {
+        width: 178px;
+        height: 48px;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        background: white;
+        border: 1px solid #3E334E;
+    
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+    
+    .container form .textoOpcao {
+        width: 380px;
+        height: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    
+        margin-bottom: 16px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    
+    .container form .facebook {
+        width: 116px;
+        height: 38px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 4px;
+        border: 1px;
+        gap: 8px;
+        margin-left: 24px;
+        margin-right: 16px;
+        margin-bottom: 56px;
+        border: 1px solid #AFA2C3;
+        background: white;
+    
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+    
+    .container form .linkedIn {
+        width: 116px;
+        height: 38px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 4px;
+        border: 1px;
+        gap: 8px;
+        margin-right: 16px;
+        margin-bottom: 56px;
+        border: 1px solid #AFA2C3;
+        background: white;
+    
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+    
+    .container form .google {
+        width: 116px;
+        height: 38px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 4px;
+        border: 1px;
+        gap: 8px;
+        margin-right: 24px;
+        margin-bottom: 56px;
+        border: 1px solid #AFA2C3;
+        background: white;
+    
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+}
+
+/* Celular deitado */
+
+@media(orientation: landscape){
+    .container {
+        width: 100vw;
+        height: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .container .imagem {
+        object-fit: cover;
+        object-position: bottom;
+    }
+    
+    .container .logo {
+        width: Hug (178px);
+        height: Hug (48px);
+        top: 230px;
+        gap: 16px;
+        left: 24px;
+        margin-left: 24px;
+        margin-bottom: 32px;
+    
+    }
+    
+    .container .header {
+        width: 347px;
+        height: 60px;
+        top: 310px;
+        left: 24px;
+        margin-left: 24px;
+        margin-right: 57px;
+        margin-bottom: 32px;
+    }
+    
+    .container .Login {
+        width: 380px;
+        height: 24px;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    
+    .container form .inputContainer label {
+        width: 380px;
+        height: 16px;
+        line-height: 16px;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 24px;
+        line-height: 100%;
+    }
+    
+    .container form .inputContainer input {
+        width: 380px;
+        height: 56px;
+        gap: 8px;
+        padding: 16px;
+        align-items: center;
+        display: flex;
+        align-self: stretch;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        margin-top: 5px;
+        border: 1px solid #afa2c3;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.00);
+    }
+    
+    .container form .inputContainerPassword label {
+        width: 380px;
+        height: 16px;
+        line-height: 16px;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 24px;
+        line-height: 100%;
+    }
+    
+    .container form .inputContainerPassword input {
+        width: 380px;
+        height: 56px;
+        gap: 8px;
+        padding: 16px;
+        align-items: center;
+        display: flex;
+        align-self: stretch;
+        margin-left: 24px;
+        margin-top: 5px;
+        border: 1px solid #afa2c3;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.00);
+    }
+    
+    .container form .inputContainerPassword img {
+        width: 24px;
+        height: 100px;
+        padding: 4px, 2px, 3px, 2px;
+        cursor: pointer;
+        position: absolute;
+        margin-left: 270px;
+    }
+    
+    
+    .container form a {
+        width: 136px;
+        height: 16px;
+        font-weight: 400;
+        size: 16px;
+        line-height: 16px;
+        margin-left: 110px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+    
+    .container form .checkbox {
+        width: Hug (134px);
+        height: Hug (16px);
+        gap: 8px;    
+        margin-right: 5px;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+    
+    .container form .buttonLogin {
+        width: 178px;
+        height: 48px;
+        padding: 16px;
+        border-radius: 8px;
+        margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        background: #3E334E;
+    
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        border: none;
+        text-align: center;
+        color: #FFFFFF;
+    
+    }
+    
+    .container form .buttonSignUp {
+        width: 178px;
+        height: 48px;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        background: white;
+        border: 1px solid #3E334E;
+    
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+    
+    .container form .textoOpcao {
+        width: 380px;
+        height: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    
+        margin-bottom: 16px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    
+    .container form .facebook {
+        width: 116px;
+        height: 38px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 4px;
+        border: 1px;
+        gap: 8px;
+        margin-left: 24px;
+        margin-right: 16px;
+        margin-bottom: 56px;
+        border: 1px solid #AFA2C3;
+        background: white;
+    
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+    
+    .container form .linkedIn {
+        width: 116px;
+        height: 38px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 4px;
+        border: 1px;
+        gap: 8px;
+        margin-right: 16px;
+        margin-bottom: 56px;
+        border: 1px solid #AFA2C3;
+        background: white;
+    
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
+    
+    .container form .google {
+        width: 116px;
+        height: 38px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 4px;
+        border: 1px;
+        gap: 8px;
+        margin-right: 24px;
+        margin-bottom: 56px;
+        border: 1px solid #AFA2C3;
+        background: white;
+    
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #3E334E;
+    }
 }

@@ -1,11 +1,28 @@
-import ImagemTopo from './assets/ImagemTopo.svg';
+import * as React from 'react'
+import ImagemTopo from './assets/ImagemTopo.svg'
+import Desktop from './assets/TelaDesktop.svg'
 import Logo from './assets/Logo.svg'
 import './global.css'
+import Eye from './assets/olho.svg'
 
 export function App() {
+
+  const matches = usedMediaQuery('(min-width:600px)');
+      const ImagemDesktop = {Desktop};
+      const Topo = {ImagemTopo};
+      const [Imagem, setImagem] = React.useState("");
+      React.useEffect(() =>{
+        if(matches){
+          setImagem(ImagemDesktop);
+        }
+        else{
+          setImagem(Topo);
+        }
+      }, []);
+
   return <div className="container">
     <header className="imagem">
-      <img src={ImagemTopo} alt="ImagemTop" />
+      <img src={Imagem} alt="ImagemTop" />
     </header>
     <header className="logo">
       <img src={Logo} alt="Logo" />
@@ -21,14 +38,19 @@ export function App() {
         <input type="text" name="email" id="email" placeholder='robert.langster@gmail.com' />
       </div>
 
-      <div className="inputContainer">
+      <div className="inputContainerPassword">
         <label htmlFor="password">Password</label>
-        <input type="text" name="password" id="password" placeholder='********' />
+        <img src={Eye} alt="olho" />
+        <input type="password" name="password" id="password" placeholder='********' />
       </div>
 
+
+      <input type="checkbox" className="checkbox" name="checkbox" id="checkbox" />
+      <label htmlFor="checkbox">Remember me</label>
       <a href="">Forgot password?</a>
 
-      <button className="buttonLogin">
+
+      <button type="submit" className="buttonLogin">
         Login
       </button>
 
@@ -47,7 +69,7 @@ export function App() {
       </button>
 
       <button className="google">
-        google
+        Google
       </button>
     </form>
   </div>
