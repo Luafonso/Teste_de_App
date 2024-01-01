@@ -1,4 +1,3 @@
-import * as React from 'react'
 import ImagemTopo from './assets/ImagemTopo.svg'
 import Desktop from './assets/TelaDesktop.svg'
 import Logo from './assets/Logo.svg'
@@ -7,22 +6,9 @@ import Eye from './assets/olho.svg'
 
 export function App() {
 
-  const matches = usedMediaQuery('(min-width:600px)');
-      const ImagemDesktop = {Desktop};
-      const Topo = {ImagemTopo};
-      const [Imagem, setImagem] = React.useState("");
-      React.useEffect(() =>{
-        if(matches){
-          setImagem(ImagemDesktop);
-        }
-        else{
-          setImagem(Topo);
-        }
-      }, []);
-
   return <div className="container">
     <header className="imagem">
-      <img src={Imagem} alt="ImagemTop" />
+      <img src={ImagemTopo} alt="ImagemTop" />
     </header>
     <header className="logo">
       <img src={Logo} alt="Logo" />
