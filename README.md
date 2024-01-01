@@ -14,11 +14,12 @@ A página teve o deploy feito no vercel: https://teste-de-app.vercel.app/
 Tenha o Node.js e npm instalados no seu computador. 
 
 ### Clonar o repositório
-'''git clone https://github.com/Luafonso/Teste_de_App.git
-   cd App/'''
+
+`git clone https://github.com/Luafonso/Teste_de_App.git`
+`cd App/`
 
 ### Instalar as dependencias do código
-'npm install'
+`npm install`
 
 ### Rodar o código
-'npm run dev'
+`npm run dev`
